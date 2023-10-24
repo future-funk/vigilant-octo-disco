@@ -1,2 +1,0 @@
-export * from './DEFAULT_FORM_VALUES'
-export * from './DEFAULT_PROJECT_REQ_TYPE_TITLE_MAP'

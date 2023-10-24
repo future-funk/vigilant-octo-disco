@@ -1,2 +1,0 @@
-export { default as <%= titleCase(name) %> } from './lib/components/<%= titleCase(name) %>'
-export * from './lib/components/<%= titleCase(name) %>'

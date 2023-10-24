@@ -1,5 +1,0 @@
-.ps__rail-y {
-  left: unset !important;
-  right: 0;
-  z-index: 999;
-}

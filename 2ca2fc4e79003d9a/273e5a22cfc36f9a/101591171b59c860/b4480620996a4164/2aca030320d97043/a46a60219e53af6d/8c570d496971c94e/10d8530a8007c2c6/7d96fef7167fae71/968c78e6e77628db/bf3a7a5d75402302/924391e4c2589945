@@ -1,5 +1,0 @@
-export { default as quickDealSchema } from './quickDealSchema'
-export { default as dealStaffingSchema } from './dealStaffingSchema'
-export { default as dealPreliminarySchema } from './dealPreliminarySchema'
-export { default as dealAllocationSchema } from './dealAllocationSchema'
-export { default as dealCounterPartiesSchema } from './dealCounterPartiesSchema'

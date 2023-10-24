@@ -1,5 +1,0 @@
-export { default as scopeId } from './scopeId'
-export * from './LOGISTICS_CARTO_TAG'
-export * from './API_SCOPE'
-export * from './GROUP_BY_COLUMNS'
-export * from './LOGISTICS_BPD_API_TAG'
