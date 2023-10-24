@@ -7,9 +7,4 @@ on:
 jobs:
   OSS:
     uses: gic-actions/oss/.github/workflows/dependency-review.yml@main
-
-  create_files:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    
