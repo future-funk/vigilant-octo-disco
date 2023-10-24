@@ -1,0 +1,27 @@
+{
+  "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/bpd-web/directory/feature-shell/us/feature-shell/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bpd-web/directory/feature-shell/us/feature-shell/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/bpd-web/directory/feature-shell/us/feature-shell`"
+      ],
+      "options": {
+        "jestConfig": "libs/bpd-web/directory/feature-shell/us/feature-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

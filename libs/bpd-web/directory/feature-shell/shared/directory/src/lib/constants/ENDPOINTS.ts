@@ -1,0 +1,1 @@
+export const THUMBNAIL_BASE = `https://blueprintdev.gic.com.sg/assets/thumbnails/properties`

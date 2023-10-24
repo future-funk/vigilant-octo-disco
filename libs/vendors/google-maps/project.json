@@ -1,0 +1,23 @@
+{
+  "$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/vendors/google-maps/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/vendors/google-maps/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/vendors/google-maps"],
+      "options": {
+        "jestConfig": "libs/vendors/google-maps/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+# This method of CI builds the app outside of docker, and copies the files into the docker container during docker build.
+# i.e. the docker build is very lightweight. Merely copies the ready to use artifacts inside.
+# The heavy lifting of building the app happens in GH's cloud runner ubuntu-latest
+
+name: CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Use the correct setup depending on your code language (where necessary)
+      # Some languages SDKs come pre-installed in the cloud runner ubuntu-latest. Check GitHub's documentation for more details.
+      # - name: Setup .NET
+      #   uses: actions/setup-dotnet@v3
+      #   with:
+      #     dotnet-version: 6.0.x
+
+      # - name: Setup Node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16.x
+
+      # - name: Setup Java
+      #   uses: actions/setup-java@v1
+      #   with:
+      #     java-version: 1.8
+
+      - name: Build
+        run: |
+          echo Enter your build commands here
+          echo Move your artifacts including Dockerfile into a folder of your choosing, ensuring the folder structure is correct
+          echo Use the Package step to create an artifact to be passed to the publish-artifactory action further below
+          mkdir artifactPathInWorkspace
+          touch artifactPathInWorkspace/helloworld.txt
+          cp Dockerfile artifactPathInWorkspace/
+      - name: Package
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact
+          path: artifactPathInWorkspace
+          retention-days: 1
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: test
+        run: |
+          echo Enter your test commands here
+
+  build-docker-and-push:
+    runs-on: selfhosted-prod
+    env:
+      REGISTRY: jfrogprod.gic.com.sg
+      REPO: ${{ vars.ASSET_NAME }}-docker
+      IMAGE: ${{ github.event.repository.name }}
+    steps:
+      - name: SetEnv
+        id: setenv
+        run: |
+          VERSION=${GITHUB_SHA::7}
+          TAG=$REGISTRY/$REPO/$IMAGE:$VERSION
+          echo "TAG=$TAG" >> $GITHUB_ENV
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: .
+
+      - name: Docker Build
+        run: docker build -t $TAG .
+
+      - name: Prisma Cloud Scan
+        uses: gic-actions/prismacloud@main
+        with:
+          image_name: $TAG
+          ASSET_ID: ${{ vars.ASSET_ID }}
+          pcc_console_url: ${{ vars.PCC_CONSOLE_URL }}
+          pcc_user: ${{ secrets.PCC_USER }}
+          pcc_pass: ${{ secrets.PCC_PASS }}
+          
+      - name: Docker Push
+        env:
+          JF_USER: ${{ secrets.CIUSER_ARTIFACTORY_USER }}
+          JF_PASSWORD: ${{ secrets.CIUSER_ARTIFACTORY_ENCRYPTED_PASSWORD }}
+        run: |
+          echo $JF_PASSWORD | docker login $REGISTRY -u $JF_USER --password-stdin
+          docker push $TAG
+
+  helm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Helm
+        run: |
+          echo replace me with packaging your helm charts to the package registry
+          echo you may sed the version to dynamically change your image tags
+          echo the default implementation assumes you have a helmcharts folder in your source code root which contains subfolders of helmcharts
+        #e.g. sed -i "s/VERSION_TAG/'${GITHUB_SHA::7}'/g" ./helmcharts/adapi/base.yaml
+      - name: Package Helm
+        uses: actions/upload-artifact@v3
+        with:
+          name: helmcharts
+          path: helmcharts
+          retention-days: 1
+
+  publish-helm:
+    needs: helm
+    uses: gic-actions/artifactory/.github/workflows/publish-generic.yml@main
+    with:
+      artifactname: helmcharts
+    secrets: inherit
+

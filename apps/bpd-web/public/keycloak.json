@@ -1,0 +1,9 @@
+{
+  "realm": "gic-dev",
+  "auth-server-url": "https://sso-ext-uat-aws-sin.apps.osd-gic-np.v0t5.p1.openshiftapps.com/auth",
+  "ssl-required": "external",
+  "resource": "blueprint",
+  "public-client": true,
+  "enable-cors": true,
+  "confidential-port": 0
+}

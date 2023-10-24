@@ -1,0 +1,25 @@
+{
+  "$schema": "..\\..\\..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/bpd-web/daw/eu/shared/core/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bpd-web/daw/eu/shared/core/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/bpd-web/daw/eu/shared/core"],
+      "options": {
+        "jestConfig": "libs/bpd-web/daw/eu/shared/core/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+###
+# Configuration file for setting up default review based on changed path or files.
+###
+
+# DevOps files
+/.github/ @gic-iig/devsecopsapprovers

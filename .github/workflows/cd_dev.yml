@@ -1,0 +1,27 @@
+name: CD Dev
+
+on:
+  workflow_dispatch:
+    inputs:
+      commithash:
+        description: "Commit Hash to Deploy (First 7 char)"
+        required: true
+        default: 'e.g. 69d529e'
+        type: string
+
+jobs:
+  download-helm-charts:
+    uses: gic-actions/artifactory/.github/workflows/download-generic.yml@main
+    with:
+      commithash: ${{ inputs.commithash }}
+      workflowartifactpath: "helmcharts"
+    secrets: inherit
+
+  deploy-dev:
+    needs: download-helm-charts
+    uses: gic-actions/bento/.github/workflows/helm-upgrade-nonprod.yml@main
+    with:
+      namespace: # input dev namespace
+      environment: "dev"
+      artifact_name: "helmcharts"
+    secrets: inherit

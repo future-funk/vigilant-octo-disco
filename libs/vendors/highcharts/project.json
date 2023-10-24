@@ -1,0 +1,23 @@
+{
+  "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/vendors/highcharts/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/vendors/highcharts/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/vendors/highcharts"],
+      "options": {
+        "jestConfig": "libs/vendors/highcharts/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

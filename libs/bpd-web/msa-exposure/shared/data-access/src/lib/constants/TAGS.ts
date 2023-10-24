@@ -1,0 +1,3 @@
+export const TAGS = {
+  MSA_EXPOSURE_CARTO_TAG: 'MSA_EXPOSURE_CARTO_TAG',
+}

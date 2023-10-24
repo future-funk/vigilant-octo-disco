@@ -1,0 +1,1 @@
+export const EXPORT_EXCEL_URL = '/analytics/cn/cnlg/export-excel'

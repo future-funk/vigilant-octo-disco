@@ -1,0 +1,1 @@
+export const TOOLTIP = 'excluding VAT and rent-free'

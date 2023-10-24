@@ -1,0 +1,554 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react",
+    "allowJs": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bpd/access-control": ["libs/bpd-web/access-control/src/index.ts"],
+      "@bpd/auth-adfs-oidc": ["libs/auth/adfs-oidc/src/index.ts"],
+      "@bpd/auth-authorization": ["libs/auth/authorization/src/index.ts"],
+      "@bpd/auth-keycloak": ["libs/auth/keycloak/src/index.ts"],
+      "@bpd/auth/components": ["libs/auth/components/src/index.ts"],
+      "@bpd/bpd-web/company360/global/feature-shell": [
+        "libs/bpd-web/company360/global/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/company360/shared/core": [
+        "libs/bpd-web/company360/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/company360/shared/feature-shell": [
+        "libs/bpd-web/company360/shared/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/company360/shared/routing": [
+        "libs/bpd-web/company360/shared/routing/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/anz/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/anz/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/asig/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/asig/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/cn/feature-directory": [
+        "libs/bpd-web/directory/feature-shell/cn/feature-directory/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/eu/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/eu/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/in/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/in/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/jp/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/jp/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/kr/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/kr/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/shared/core": [
+        "libs/bpd-web/directory/feature-shell/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/shared/data-access/directory": [
+        "libs/bpd-web/directory/feature-shell/shared/data-access/directory/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/shared/directory": [
+        "libs/bpd-web/directory/feature-shell/shared/directory/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/shared/ui": [
+        "libs/bpd-web/directory/feature-shell/shared/ui/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/feature-shell/us/feature-shell": [
+        "libs/bpd-web/directory/feature-shell/us/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/shared/logistics/routing": [
+        "libs/bpd-web/directory/shared/logistics/routing/src/index.ts"
+      ],
+      "@bpd/bpd-web/directory/shared/routing": [
+        "libs/bpd-web/directory/shared/routing/src/index.ts"
+      ],
+      "@bpd/esg-portal/feature-shell": [
+        "libs/bpd-web/esg-portal/feature-shell/src/index.ts"
+      ],
+      "@bpd/esg-portal/routing": [
+        "libs/bpd-web/esg-portal/routing/src/index.ts"
+      ],
+      "@bpd/esg-portal/shared/core": [
+        "libs/bpd-web/esg-portal/shared/core/src/index.ts"
+      ],
+      "@bpd/esg-portal/shared/data-access": [
+        "libs/bpd-web/esg-portal/shared/data-access/src/index.ts"
+      ],
+      "@bpd/bpd-web/experts/feature-shell": [
+        "libs/bpd-web/experts/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/experts/shared/data-access": [
+        "libs/bpd-web/experts/shared/data-access/src/index.ts"
+      ],
+      "@bpd/bpd-web/experts/shared/routing": [
+        "libs/bpd-web/experts/shared/routing/src/index.ts"
+      ],
+      "@bpd/bpd-web/global-analytics/feature-shell": [
+        "libs/bpd-web/global-analytics/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/global-analytics/shared/core": [
+        "libs/bpd-web/global-analytics/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/global-analytics/shared/routing": [
+        "libs/bpd-web/global-analytics/shared/routing/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/feature-shell": [
+        "libs/bpd-web/investment-process/eu/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/investment-memo": [
+        "libs/bpd-web/investment-process/eu/investment-memo/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/shared/core": [
+        "libs/bpd-web/investment-process/eu/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/shared/deals": [
+        "libs/bpd-web/investment-process/eu/shared/deals/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/shared/people": [
+        "libs/bpd-web/investment-process/eu/shared/people/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/shared/projects": [
+        "libs/bpd-web/investment-process/eu/shared/projects/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/eu/shared/tracker": [
+        "libs/bpd-web/investment-process/eu/shared/tracker/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/shared/core": [
+        "libs/bpd-web/investment-process/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/shared/data-access": [
+        "libs/bpd-web/investment-process/shared/data-access/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/feature-shell": [
+        "libs/bpd-web/investment-process/us/feature-shell/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/shared/core": [
+        "libs/bpd-web/investment-process/us/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/shared/deals": [
+        "libs/bpd-web/investment-process/us/shared/deals/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/shared/people": [
+        "libs/bpd-web/investment-process/us/shared/people/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/shared/projects": [
+        "libs/bpd-web/investment-process/us/shared/projects/src/index.ts"
+      ],
+      "@bpd/bpd-web/investment-process/us/shared/tracker": [
+        "libs/bpd-web/investment-process/us/shared/tracker/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/eu/feature-analysis": [
+        "libs/bpd-web/location-analysis/eu/feature-analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/eu/feature-logistics": [
+        "libs/bpd-web/location-analysis/eu/feature-logistics/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/eu/feature-office": [
+        "libs/bpd-web/location-analysis/eu/feature-office/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/eu/feature-residential": [
+        "libs/bpd-web/location-analysis/eu/feature-residential/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/eu/shared/analysis": [
+        "libs/bpd-web/location-analysis/eu/shared/analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/global/feature-office": [
+        "libs/bpd-web/location-analysis/global/feature-office/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/analysis": [
+        "libs/bpd-web/location-analysis/shared/analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/core": [
+        "libs/bpd-web/location-analysis/shared/core/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/data-access/analysis": [
+        "libs/bpd-web/location-analysis/shared/data-access/analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/data-access/market-analysis": [
+        "libs/bpd-web/location-analysis/shared/data-access/market-analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/data-access/site-analysis": [
+        "libs/bpd-web/location-analysis/shared/data-access/site-analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/data-access/site-region-mapping": [
+        "libs/bpd-web/location-analysis/shared/data-access/site-region-mapping/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/market-analysis": [
+        "libs/bpd-web/location-analysis/shared/market-analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/site-analysis": [
+        "libs/bpd-web/location-analysis/shared/site-analysis/src/index.ts"
+      ],
+      "@bpd/bpd-web/location-analysis/shared/ui": [
+        "libs/bpd-web/location-analysis/shared/ui/src/index.ts"
+      ],
+      "@bpd/bpd-web/shared/config": ["libs/bpd-web/shared/config/src/index.ts"],
+      "@bpd/bpd-web/shared/core": ["libs/bpd-web/shared/core/src/index.ts"],
+      "@bpd/bpd-web/shared/data-access": [
+        "libs/bpd-web/shared/data-access/src/index.ts"
+      ],
+      "@bpd/bpd-web/shared/hooks": ["libs/bpd-web/shared/hooks/src/index.ts"],
+      "@bpd/bpd-web/shared/public": ["libs/bpd-web/shared/ui/public/index.ts"],
+      "@bpd/bpd-web/shared/routing": [
+        "libs/bpd-web/shared/routing/src/index.ts"
+      ],
+      "@bpd/bpd-web/shared/store": ["libs/bpd-web/shared/store/src/index.ts"],
+      "@bpd/bpd-web/shared/theme": ["libs/bpd-web/shared/theme/src/index.ts"],
+      "@bpd/bpd-web/shared/ui": ["libs/bpd-web/shared/ui/src/index.ts"],
+      "@bpd/credit-portal/feature-shell": [
+        "libs/bpd-web/credit-portal/feature-shell/src/index.ts"
+      ],
+      "@bpd/credit-portal/routing": [
+        "libs/bpd-web/credit-portal/routing/src/index.ts"
+      ],
+      "@bpd/credit-portal/shared/core": [
+        "libs/bpd-web/credit-portal/shared/core/src/index.ts"
+      ],
+      "@bpd/credit-portal/shared/data-access": [
+        "libs/bpd-web/credit-portal/shared/data-access/src/index.ts"
+      ],
+      "@bpd/dashboards/routing": [
+        "libs/bpd-web/dashboards/routing/src/index.ts"
+      ],
+      "@bpd/dashboards/shared/core": [
+        "libs/bpd-web/dashboards/shared/core/src/index.ts"
+      ],
+      "@bpd/data-downloader/feature-irr-engine": [
+        "libs/bpd-web/data-downloader/feature-irr-engine/src/index.ts"
+      ],
+      "@bpd/data-downloader/routing": [
+        "libs/bpd-web/data-downloader/routing/src/index.ts"
+      ],
+      "@bpd/data-downloader/shared/core": [
+        "libs/bpd-web/data-downloader/shared/core/src/index.ts"
+      ],
+      "@bpd/daw/eu/feature-shell": [
+        "libs/bpd-web/daw/eu/feature-shell/src/index.ts"
+      ],
+      "@bpd/daw/eu/shared/core": [
+        "libs/bpd-web/daw/eu/shared/core/src/index.ts"
+      ],
+      "@bpd/daw/eu/shared/create-deal": [
+        "libs/bpd-web/daw/eu/shared/create-deal/src/index.ts"
+      ],
+      "@bpd/daw/eu/shared/create-project": [
+        "libs/bpd-web/daw/eu/shared/create-project/src/index.ts"
+      ],
+      "@bpd/daw/eu/shared/edit-deal": [
+        "libs/bpd-web/daw/eu/shared/edit-deal/src/index.ts"
+      ],
+      "@bpd/daw/routing": ["libs/bpd-web/daw/routing/src/index.ts"],
+      "@bpd/daw/shared/core": ["libs/bpd-web/daw/shared/core/src/index.ts"],
+      "@bpd/daw/shared/create-deal": [
+        "libs/bpd-web/daw/shared/create-deal/src/index.ts"
+      ],
+      "@bpd/daw/shared/data-access": [
+        "libs/bpd-web/daw/shared/data-access/src/index.ts"
+      ],
+      "@bpd/daw/shared/edit-deal": [
+        "libs/bpd-web/daw/shared/edit-deal/src/index.ts"
+      ],
+      "@bpd/daw/shared/project": [
+        "libs/bpd-web/daw/shared/project/src/index.ts"
+      ],
+      "@bpd/daw/shared/research": [
+        "libs/bpd-web/daw/shared/research/src/index.ts"
+      ],
+      "@bpd/daw/us/feature-shell": [
+        "libs/bpd-web/daw/us/feature-shell/src/index.ts"
+      ],
+      "@bpd/daw/us/shared/core": [
+        "libs/bpd-web/daw/us/shared/core/src/index.ts"
+      ],
+      "@bpd/daw/us/shared/create-deal": [
+        "libs/bpd-web/daw/us/shared/create-deal/src/index.ts"
+      ],
+      "@bpd/daw/us/shared/create-project": [
+        "libs/bpd-web/daw/us/shared/create-project/src/index.ts"
+      ],
+      "@bpd/daw/us/shared/edit-deal": [
+        "libs/bpd-web/daw/us/shared/edit-deal/src/index.ts"
+      ],
+      "@bpd/directory/feature-logistics": [
+        "libs/bpd-web/directory/feature-logistics/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-anz": [
+        "libs/bpd-web/global-analytics/feature-shell-anz/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-asig": [
+        "libs/bpd-web/global-analytics/feature-shell-asig/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-cn": [
+        "libs/bpd-web/global-analytics/feature-shell-cn/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-eu": [
+        "libs/bpd-web/global-analytics/feature-shell-eu/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-in": [
+        "libs/bpd-web/global-analytics/feature-shell-in/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-jp": [
+        "libs/bpd-web/global-analytics/feature-shell-jp/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-kr": [
+        "libs/bpd-web/global-analytics/feature-shell-kr/src/index.ts"
+      ],
+      "@bpd/global-analytics/feature-shell-us": [
+        "libs/bpd-web/global-analytics/feature-shell-us/src/index.ts"
+      ],
+      "@bpd/fund-portal/feature-shell": [
+        "libs/bpd-web/fund-portal/feature-shell/src/index.ts"
+      ],
+      "@bpd/fund-portal/routing": [
+        "libs/bpd-web/fund-portal/routing/src/index.ts"
+      ],
+      "@bpd/fund-portal/shared/core": [
+        "libs/bpd-web/fund-portal/shared/core/src/index.ts"
+      ],
+      "@bpd/fund-portal/shared/data-access": [
+        "libs/bpd-web/fund-portal/shared/data-access/src/index.ts"
+      ],
+      "@bpd/investment-process/eu/feature-daw": [
+        "libs/bpd-web/investment-process/eu/feature-daw/src/index.ts"
+      ],
+      "@bpd/investment-process/us/feature-daw": [
+        "libs/bpd-web/investment-process/us/feature-daw/src/index.ts"
+      ],
+      "@bpd/knowledge/feature-shell": [
+        "libs/bpd-web/knowledge/feature-shell/src/index.ts"
+      ],
+      "@bpd/knowledge/routing": ["libs/bpd-web/knowledge/routing/src/index.ts"],
+      "@bpd/knowledge/shared/core": [
+        "libs/bpd-web/knowledge/shared/core/src/index.ts"
+      ],
+      "@bpd/location-analysis/cn/feature-logistics": [
+        "libs/bpd-web/location-analysis/cn/feature-logistics/src/index.ts"
+      ],
+      "@bpd/location-analysis/eu/feature-overview": [
+        "libs/bpd-web/location-analysis/eu/feature-overview/src/index.ts"
+      ],
+      "@bpd/location-analysis/eu/shared/core": [
+        "libs/bpd-web/location-analysis/eu/shared/core/src/index.ts"
+      ],
+      "@bpd/location-analysis/eu/shared/logistics-directory": [
+        "libs/bpd-web/location-analysis/eu/shared/logistics-directory/src/index.ts"
+      ],
+      "@bpd/location-analysis/eu/shared/overview": [
+        "libs/bpd-web/location-analysis/eu/shared/overview/src/index.ts"
+      ],
+      "@bpd/location-analysis/kr/feature-logistics": [
+        "libs/bpd-web/location-analysis/kr/feature-logistics/src/index.ts"
+      ],
+      "@bpd/location-analysis/shared/logistics/site-analysis": [
+        "libs/bpd-web/location-analysis/shared/logistics/site-analysis/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/feature-hospitality": [
+        "libs/bpd-web/location-analysis/us/feature-hospitality/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/feature-industrial": [
+        "libs/bpd-web/location-analysis/us/feature-industrial/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/feature-office": [
+        "libs/bpd-web/location-analysis/us/feature-office/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/feature-residential": [
+        "libs/bpd-web/location-analysis/us/feature-residential/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/feature-retail": [
+        "libs/bpd-web/location-analysis/us/feature-retail/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/shared/analysis": [
+        "libs/bpd-web/location-analysis/us/shared/analysis/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/shared/core": [
+        "libs/bpd-web/location-analysis/us/shared/core/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/shared/overview": [
+        "libs/bpd-web/location-analysis/us/shared/overview/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/shared/portfolio-analysis": [
+        "libs/bpd-web/location-analysis/us/shared/portfolio-analysis/src/index.ts"
+      ],
+      "@bpd/location-analysis/us/shared/site-analysis": [
+        "libs/bpd-web/location-analysis/us/shared/site-analysis/src/index.ts"
+      ],
+      "@bpd/market-transactions/feature-shell": [
+        "libs/bpd-web/market-transactions/feature-shell/src/index.ts"
+      ],
+      "@bpd/market-transactions/routing": [
+        "libs/bpd-web/market-transactions/routing/src/index.ts"
+      ],
+      "@bpd/market-transactions/shared/core": [
+        "libs/bpd-web/market-transactions/shared/core/src/index.ts"
+      ],
+      "@bpd/market-transactions/shared/data-access": [
+        "libs/bpd-web/market-transactions/shared/data-access/src/index.ts"
+      ],
+      "@bpd/msa-exposure/feature-shell": [
+        "libs/bpd-web/msa-exposure/feature-shell/src/index.ts"
+      ],
+      "@bpd/msa-exposure/routing": [
+        "libs/bpd-web/msa-exposure/routing/src/index.ts"
+      ],
+      "@bpd/msa-exposure/shared/core": [
+        "libs/bpd-web/msa-exposure/shared/core/src/index.ts"
+      ],
+      "@bpd/msa-exposure/shared/data-access": [
+        "libs/bpd-web/msa-exposure/shared/data-access/src/index.ts"
+      ],
+      "@bpd/mv-irr/feature-shell": [
+        "libs/bpd-web/mv-irr/feature-shell/src/index.ts"
+      ],
+      "@bpd/mv-irr/routing": ["libs/bpd-web/mv-irr/routing/src/index.ts"],
+      "@bpd/mv-irr/shared/core": [
+        "libs/bpd-web/mv-irr/shared/core/src/index.ts"
+      ],
+      "@bpd/mv-irr/shared/data-access": [
+        "libs/bpd-web/mv-irr/shared/data-access/src/index.ts"
+      ],
+      "@bpd/my-workspace/feature-shell": [
+        "libs/bpd-web/my-workspace/feature-shell/src/index.ts"
+      ],
+      "@bpd/my-workspace/routing": [
+        "libs/bpd-web/my-workspace/routing/src/index.ts"
+      ],
+      "@bpd/my-workspace/shared/core": [
+        "libs/bpd-web/my-workspace/shared/core/src/index.ts"
+      ],
+      "@bpd/my-workspace/shared/data-access": [
+        "libs/bpd-web/my-workspace/shared/data-access/src/index.ts"
+      ],
+      "@bpd/project-hansel/feature-overview": [
+        "libs/bpd-web/project-hansel/feature-overview/src/index.ts"
+      ],
+      "@bpd/project-hansel/shared/core": [
+        "libs/bpd-web/project-hansel/shared/core/src/index.ts"
+      ],
+      "@bpd/project-hansel/shared/data-access/overview": [
+        "libs/bpd-web/project-hansel/shared/data-access/overview/src/index.ts"
+      ],
+      "@bpd/project-hansel/shared/routing": [
+        "libs/bpd-web/project-hansel/shared/routing/src/index.ts"
+      ],
+      "@bpd/re-flow/feature-shell": [
+        "libs/bpd-web/re-flow/feature-shell/src/index.ts"
+      ],
+      "@bpd/re-flow/shared/core": [
+        "libs/bpd-web/re-flow/shared/core/src/index.ts"
+      ],
+      "@bpd/re-flow/shared/data-access": [
+        "libs/bpd-web/re-flow/shared/data-access/src/index.ts"
+      ],
+      "@bpd/re-flow/shared/routing": [
+        "libs/bpd-web/re-flow/shared/routing/src/index.ts"
+      ],
+      "@bpd/strats-portal/feature-shell": [
+        "libs/bpd-web/strats-portal/feature-shell/src/index.ts"
+      ],
+      "@bpd/strats-portal/routing": [
+        "libs/bpd-web/strats-portal/routing/src/index.ts"
+      ],
+      "@bpd/strats-portal/shared/core": [
+        "libs/bpd-web/strats-portal/shared/core/src/index.ts"
+      ],
+      "@bpd/strats-portal/shared/data-access": [
+        "libs/bpd-web/strats-portal/shared/data-access/src/index.ts"
+      ],
+      "@bpd/esg-ade-portal/feature-shell": [
+        "libs/bpd-web/esg-ade-portal/feature-shell/src/index.ts"
+      ],
+      "@bpd/esg-ade-portal/routing": [
+        "libs/bpd-web/esg-ade-portal/routing/src/index.ts"
+      ],
+      "@bpd/esg-ade-portal/shared/core": [
+        "libs/bpd-web/esg-ade-portal/shared/core/src/index.ts"
+      ],
+      "@bpd/esg-ade-portal/shared/data-access": [
+        "libs/bpd-web/esg-ade-portal/shared/data-access/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-anz": [
+        "libs/bpd-web/team-analytics/feature-shell-anz/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-asig": [
+        "libs/bpd-web/team-analytics/feature-shell-asig/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-cn": [
+        "libs/bpd-web/team-analytics/feature-shell-cn/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-eu": [
+        "libs/bpd-web/team-analytics/feature-shell-eu/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-in": [
+        "libs/bpd-web/team-analytics/feature-shell-in/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-jp": [
+        "libs/bpd-web/team-analytics/feature-shell-jp/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-kr": [
+        "libs/bpd-web/team-analytics/feature-shell-kr/src/index.ts"
+      ],
+      "@bpd/team-analytics/feature-shell-us": [
+        "libs/bpd-web/team-analytics/feature-shell-us/src/index.ts"
+      ],
+      "@bpd/team-analytics/routing": [
+        "libs/bpd-web/team-analytics/routing/src/index.ts"
+      ],
+      "@bpd/twr-engine/feature-shell": [
+        "libs/bpd-web/twr-engine/feature-shell/src/index.ts"
+      ],
+      "@bpd/twr-engine/routing": [
+        "libs/bpd-web/twr-engine/routing/src/index.ts"
+      ],
+      "@bpd/twr-engine/shared/core": [
+        "libs/bpd-web/twr-engine/shared/core/src/index.ts"
+      ],
+      "@bpd/twr-engine/shared/data-access": [
+        "libs/bpd-web/twr-engine/shared/data-access/src/index.ts"
+      ],
+      "@bpd/ui/constants": ["libs/ui/constants/src/index.ts"],
+      "@bpd/ui/hooks": ["libs/ui/hooks/src/index.ts"],
+      "@bpd/ui/libs/react-fallback": [
+        "libs/ui/libs/react-fallback/src/index.ts"
+      ],
+      "@bpd/ui/libs/react-slots": ["libs/ui/libs/react-slots/src/index.ts"],
+      "@bpd/utils/casing": ["libs/utils/casing/src/index.ts"],
+      "@bpd/utils/fiscal-year": ["libs/utils/fiscal-year/src/index.ts"],
+      "@bpd/utils/formatters": ["libs/utils/formatters/src/index.ts"],
+      "@bpd/utils/json-parser": ["libs/utils/json-parser/src/index.ts"],
+      "@bpd/utils/typescript-utils": [
+        "libs/utils/typescript-utils/src/index.ts"
+      ],
+      "@bpd/utils/utils": ["libs/utils/utils/src/index.ts"],
+      "@bpd/vendors/ag-grid": ["libs/vendors/ag-grid/src/index.ts"],
+      "@bpd/vendors/carto": ["libs/vendors/carto/src/index.ts"],
+      "@bpd/vendors/google-maps": ["libs/vendors/google-maps/src/index.ts"],
+      "@bpd/vendors/highcharts": ["libs/vendors/highcharts/src/index.ts"],
+      "@bpd/vendors/html-react-parser": [
+        "libs/vendors/html-react-parser/src/index.ts"
+      ],
+      "@bpd/vendors/perfect-scrollbar": [
+        "libs/vendors/perfect-scrollbar/src/index.ts"
+      ],
+      "@bpd/vendors/react-hot-toast": [
+        "libs/vendors/react-hot-toast/src/index.ts"
+      ],
+      "@http-handler": ["libs/http-handler/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.js"],
+  "exclude": ["node_modules", "tmp"]
+}

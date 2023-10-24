@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <version>${major.version}.${minor.version}.${build.version}-${suffix.version}</version>
+  <major.version>3</major.version>
+  <minor.version>133</minor.version>
+  <build.version>1</build.version>
+  <suffix.version>Release</suffix.version>
+</main>

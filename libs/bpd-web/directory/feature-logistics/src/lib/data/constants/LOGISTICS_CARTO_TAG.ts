@@ -1,0 +1,1 @@
+export const LOGISTICS_CARTO_TAG = 'LOGISTICS_CARTO'

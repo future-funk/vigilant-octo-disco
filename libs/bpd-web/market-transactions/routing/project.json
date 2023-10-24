@@ -1,0 +1,25 @@
+{
+  "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/bpd-web/market-transactions/routing/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bpd-web/market-transactions/routing/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/bpd-web/market-transactions/routing"],
+      "options": {
+        "jestConfig": "libs/bpd-web/market-transactions/routing/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

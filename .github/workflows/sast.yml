@@ -1,0 +1,12 @@
+name: "SAST"
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+jobs:
+  SAST:
+    uses: gic-actions/sast/.github/workflows/codeql.yml@main

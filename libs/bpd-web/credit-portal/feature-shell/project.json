@@ -1,0 +1,25 @@
+{
+  "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/bpd-web/credit-portal/feature-shell/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bpd-web/credit-portal/feature-shell/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/bpd-web/credit-portal/feature-shell"],
+      "options": {
+        "jestConfig": "libs/bpd-web/credit-portal/feature-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

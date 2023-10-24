@@ -1,0 +1,14 @@
+import React from 'react';
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface <%= titleCase(name) %>Props {}
+
+const <%= titleCase(name) %>: React.FC<<%= titleCase(name) %>Props> = () => {
+  return (
+    <div>
+        Welcome to <%= titleCase(name) %>
+    </div>
+  );
+};
+
+export default <%= titleCase(name) %>;

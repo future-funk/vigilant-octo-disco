@@ -1,0 +1,25 @@
+{
+  "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+  "sourceRoot": "libs/bpd-web/fund-portal/routing/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/bpd-web/fund-portal/routing/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/bpd-web/fund-portal/routing"],
+      "options": {
+        "jestConfig": "libs/bpd-web/fund-portal/routing/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

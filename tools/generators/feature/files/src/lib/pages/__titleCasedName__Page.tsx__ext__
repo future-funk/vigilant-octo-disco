@@ -1,0 +1,27 @@
+import React from 'react';
+import { DynamicReducer } from '@bpd/bpd-web/shared/feature-store'
+import <%= titleCase(name) %> from "../components/<%= titleCase(name) %>";
+import { <%= upperSnakeCase(name) %>_SLICE_KEY, <%= camelCase(name) %>Reducer } from '../data/stores/<%= camelCase(name) %>Slice';
+
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface <%= titleCase(name) %>PageProps {}
+
+const modules = [
+  {
+    key: <%= upperSnakeCase(name) %>_SLICE_KEY,
+    reducer: <%= camelCase(name) %>Reducer ,
+  },
+]
+
+export const <%= titleCase(name) %>Page: React.FC<<%= titleCase(name) %>PageProps> = (
+  props
+) => {
+  return (
+    <DynamicReducer modules={[]}>
+      <h1>Welcome to <%= titleCase(name) %>Page</h1>
+      <<%= titleCase(name) %> />
+    </DynamicReducer>
+  );
+};
+
+export default <%= titleCase(name) %>Page;
