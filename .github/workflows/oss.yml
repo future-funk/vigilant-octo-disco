@@ -1,10 +1,16 @@
-name: 'OSS'
+name: 'Dependency Review'
 
 on:
   pull_request:
     branches: [ "main" ]
   
 jobs:
-  OSS:
-    uses: gic-actions/oss/.github/workflows/dependency-review.yml@main
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v3         
     
